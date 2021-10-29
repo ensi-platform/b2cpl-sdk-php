@@ -10,7 +10,7 @@ use Ensi\B2Cpl\Dto\Response\Part\OrderStatus\OrderStatusOutputDto;
  * Class OrdersStatusResponseDto
  * @package Ensi\B2Cpl\Dto\Response
  *
- * @property array|OrderStatusOutputDto[] $Orders - массив заказов со статусами
+ * @property array|OrderStatusOutputDto[] $orders - массив заказов со статусами
  */
 class OrdersStatusResponseDto extends AbstractDto
 {
@@ -22,10 +22,10 @@ class OrdersStatusResponseDto extends AbstractDto
     {
         parent::__construct($attributes);
     
-        $this->Orders = $this->Orders ?
+        $this->orders = $this->orders ?
             array_map(function ($item) {
                 return new OrderStatusOutputDto($item);
-            }, $this->Orders) :
+            }, $this->orders) :
             [];
     }
 }
