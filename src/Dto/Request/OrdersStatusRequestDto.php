@@ -18,7 +18,7 @@ use Ensi\B2Cpl\Dto\AbstractDto;
  * @property int $flag_parcels - включает в ответ данные о местах (вес и габариты)
  * @property int $flag_bills - включает в ответ данные о счетах
  * @property int $flag_status_post - включает в ответ историю статусов Почты России
- * @property array|string[] $codes - массив кодов, по которым осуществляется запрос
+ * @property array|string[] $codes - массив номеров заказов, по которым осуществляется запрос
  */
 class OrdersStatusRequestDto extends AbstractDto
 {
